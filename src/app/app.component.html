@@ -1,0 +1,23 @@
+<div class="container d-flex flex-column align-items-center p-4 ">
+  <div class="row d-flex justify-content-center text-center">Trading view</div>
+  <form (submit)="onSubmit()">
+    <div class="col-12 mb-2">
+      <input-app lable="number 1" [(value)]="valueInputFirst"></input-app>
+    </div>
+    <div class="col-12">
+      <input-app lable="number 2" [(value)]="valueInputSecond"></input-app>
+    </div>
+    <div class="d-flex justify-content-start gap-2">
+
+      <button-app (dataEvent)="receiveData($event)" name="+"></button-app>
+      <button-app (dataEvent)="receiveData($event)" name="-"></button-app>
+      <button-app (dataEvent)="receiveData($event)" name="x"></button-app>
+      <button-app (dataEvent)="receiveData($event)"name="/"></button-app>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        Result: {{result}}
+      </div>
+    </div>
+  </form>
+</div>
